@@ -1,9 +1,9 @@
-# CE{Code of Course}-{Short Name of Course}
-Solutions to Prof. {Name of Prof}'s CE{Code of Course}: {Full Name of Course} ({Name of Uni} - {Semester} {Year}) Assignments
+# CE323-CA
+Solutions to Dr. Arshadi's CE323: Computer Architecture (Sharif University of Technology - Spring 2024) Assignments
 
 ## Overview
 
-This repository contains solutions to the assignments for the CE{Code of Course}: {Full Name of Course} course at the {Name of Uni}, {Semester} {Year}, taught by Prof. {Name of Prof}.
+This repository contains solutions to the assignments for the CE323: Computer Architecture course at the Sharif University of Technology, Spring 2024, taught by Dr. Arshadi.
 
 ## Table of Contents
 
