@@ -44,19 +44,19 @@ my_func:
     move    $s1,        $zero
 
     beq     $a1,        $a2,        return_1    #if n==r return 1
-    ble     $a1,        $a2,        return_0    #checking if n is smaller; only happens if the entered values are like this
-    beq     $a2,        $zero,      return_1    #if r becomes/is zero, it's finished
+    ble     $a1,        $a2,        return_0    #if n is smaller
+    beq     $a2,        $zero,      return_1    #if r is zero
 
     addi    $a1,        $a1,        -1          # n = n-1
 
     addi    $sp,        $sp,        -16
     sw      $ra,        12($sp)
-    sw      $a1,        8($sp)                  #saving value of n
-    sw      $a2,        4($sp)                  #saving value of r
-    sw      $s1,        0($sp)
+    sw      $a1,        8($sp)
+    sw      $s1,        4($sp)
+    sw      $a2,        0($sp)
     jal     my_func                             # $v0 = C(n-1, r)
-    lw      $s1,        0($sp)
-    lw      $a2,        4($sp)
+    lw      $a2,        0($sp)
+    lw      $s1,        4($sp)
     lw      $a1,        8($sp)
     lw      $ra,        12($sp)
     addi    $sp,        $sp,        16
@@ -68,8 +68,8 @@ my_func:
 
     addi    $sp,        $sp,        -16
     sw      $ra,        12($sp)
-    sw      $a1,        8($sp)                  #saving value of n
-    sw      $a2,        4($sp)                  #saving value of r
+    sw      $a1,        8($sp)
+    sw      $a2,        4($sp)
     sw      $s1,        0($sp)
     jal     my_func                             # $v0 = C(n-1, r-1)
     lw      $s1,        0($sp)
@@ -92,5 +92,5 @@ return_0:
 .data   
 input1:     .asciiz "Please Enter n:\n"
 input2:     .asciiz "Please Enter r:\n"
-output1:    .asciiz "C(n,r)=\n"
+output1:    .asciiz "C(n,r)="
 
