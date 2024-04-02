@@ -2,20 +2,27 @@
     la      $a0,    input1_str                          #load the address of string
     addi    $v0,    $zero,          4                   #code for printing string
     syscall                                             #print the first string
-
     addi    $v0,    $zero,          5                   #code for reading integer
     syscall                                             #read n
     add     $s0,    $zero,          $v0                 #s0 is n
-
     add     $s1,    $zero,          $zero               #s1 is the counter
-
     sll     $a0,    $s0,            2                   #a0 contains the number of bytes to allocate (n*4)
+
+
+
+
+
+
+
+
     addi    $v0,    $zero,          9                   #code for allocating memory
     syscall                                             #allocate memory for n words
     add     $s2,    $zero,          $v0                 #s2 contains the memory address
 
     add     $s3,    $zero,          $zero               #s3 contains the sum of all inputs
     add     $s4,    $zero,          $zero               #s4 contains the sum of squares of inputs
+
+
 
 loop:                                                   #loop for reading inputs
     la      $a0,    input2_str                          #load the address of string
@@ -29,9 +36,12 @@ loop:                                                   #loop for reading inputs
     la      $a0,    input3_str                          #load the address of string
     addi    $v0,    $zero,          4                   #code for printing string
     syscall                                             #print the first string
-
     addi    $v0,    $zero,          5                   #code for reading integer
     syscall                                             #v0 contains the input number
+
+
+
+
     sll     $t0,    $s1,            2                   #t0 = counter * 4
     add     $s2,    $s2,            $t0                 #address of memory we want to store the input to = s2 + 4 * counter
     sw      $v0,    0($s2)                              #store in memory
@@ -42,10 +52,22 @@ loop:                                                   #loop for reading inputs
     mflo    $t0                                         #stor the low bytes of multiplication result to t0
     add     $s4,    $s4,            $t0                 #sum_of_squares += input^2
 
+
+
+
     addi    $s1,    $s1,            1                   #increasing counter
+
+
+
+
 
     beq     $s1,    $s0,            after_loop          #end loop when the counter is n
     ble     $s1,    $s0,            loop                #continue if the counter is less than n
+
+
+
+
+
 
 after_loop:                                             #now we calculate and print the output
     mtc1    $s4,    $f4                                 #f4 = (float) sum_of_squares
