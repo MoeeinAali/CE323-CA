@@ -98,5 +98,232 @@ $PC \leftarrow PC + 4$
 
 \setRTL
 
-\subsubsection*{ه}
+\pagebreak
+
+
+مقدار موجود در هر یک از ثبات‌ها به شرح زیر است:
+
+\setLTR
+
+$\includegraphics[width=0.7\linewidth]{figs/4}$
+
+\setRTL
+
+\subsection*{ه}
+
+در این بخش باید مقادیر خروجی هر یک از MUX ها را مشخص کنیم. ابتدا به سراغ دستور a می‌رویم:
+
+\setLTR
+
+$\qquad\qquad\qquad\includegraphics[width=0.7\linewidth]{figs/5.png}$
+
+\setRTL
+
+\begin{enumerate}
+	\item 
+	چون دستور ما sw است و RegDst برابر صفر است، پس خروجی این مالتیپلکسر برابر است با:
+	\setLTR
+	
+	$MUX_1 = Instruction[20:16]=(00010)_2 = (2)_{10} \rightarrow \$R2$
+	
+	\setRTL
+	
+	\item 
+چون سیم مربوط به ALUSrc برابر یک است، پس حاصل واحد Extend Sign مقدار خروجی آن است:
+\setLTR
+
+$MUX_2 = SignExtend(Instruction[15:0])= (14)_{16} = (20)_{10} \rightarrow \$R20$
+
+\setRTL
+
+	\item 
+خروجی این مالتیپلکسر برای ما فاقد اهمیت است.
+
+\setLTR
+
+$MUX_3 = \times$
+
+\setRTL
+
+	\item 
+سیم مربوط به Branch صفر است، پس خروجی این مالتیپلکسر برابر است با:
+\setLTR
+
+$MUX_4 = PC +4$
+
+\setRTL
+
+	\item 
+چون این دستور مربوط به Jump نیست و سیم مربوط به آن صفر است، پس خروجی ما برابر است با:
+\setLTR
+
+$MUX_5 = PC +4$
+
+\setRTL
+	\end{enumerate}
+
+حال به سراغ دستور b می‌روبم:
+
+\begin{enumerate}
+		\item 
+مقدار سیم مربوط به RegDst برابر یک است، پس rd خروجی داده می‌شود:
+	\setLTR
+	
+	$MUX_1 = Instruction[15:11]=(00001)_2 = (1)_{10}$
+	
+	\setRTL
+	
+		\item 
+چون سیم مربوط به ALUSrc برابر صفر است، مقدار 2ReadData خروجی داده می‌شود:
+\setLTR
+
+$MUX_2 = Instruction[20:16]= \$rt = \$R2 $
+
+\setRTL	
+	
+			\item 
+	چون سیم مربوط به MemtoReg قطع است، پس خروجی این مالتیپلکسر برابر است با:
+	\setLTR
+	
+	$MUX_3 = ALUResult =slt \ \ \$a_t \ ,\ \$a_0 \ , \ \$v_0 = 0$
+	
+	\setRTL	
+	
+				\item 
+بیت کنترلی Branch صفر چون دستور ما مربوط به Branch یا Jump نیست، پس خروجی برابر است با:
+	\setLTR
+	
+	$MUX_4 = PC + 4$
+	
+	\setRTL	
+	
+			\item 
+به همان دلیلی که در مورد قبل گفته شد، خروجی برابر است با:
+	\setLTR
+	
+	$MUX_5 = PC + 4$
+	
+	\setRTL	
+\end{enumerate}
+
+\subsubsection*{و}
+
+در این بخش باید ورودی‌های ALU و واحدهای Add موجود در این معماری را محاسبه کنیم. ابتدا به سراغ دستور a می‌رویم:
+
+\begin{enumerate}
+	\item ورودی‌های واحد ALU معماری:
+	
+	\setLTR
+	$
+	\begin{cases}
+		Read1= Instruction[25-21] =\$rs = \$R_3 = (-3)_{10} \\
+		Read2 =Instruction[20-16]= address = (20)_{10}
+		
+		\end{cases}
+	$
+	\setRTL
+	
+	\item ورودی‌های واحد Add سمت چپ معماری:
+	
+	\setLTR
+	$
+	\begin{cases}
+		input1= PC  \\
+		input2 = 4
+		
+	\end{cases}
+	$
+	
+	\setRTL
+	
+	\item ورودی‌های واحد Add سمت راست معماری:
+	
+	\setLTR
+	
+		$
+	\begin{cases}
+		input1= PC + 4 \\
+		input2 = 4 \times Address = 80
+		
+	\end{cases}
+	$
+		\setRTL
+		
+		
+\end{enumerate}
+
+حال به سراغ دستور b می‌رویم:
+
+
+\begin{enumerate}
+	\item ورودی‌های واحد ALU معماری:
+	
+\setLTR
+$
+\begin{cases}
+	Read1= Instruction[25-21] =\$rs = \$R_2 = -128 \\
+	Read2 =Instruction[20-16]= \$rt =\$R_4 = -32
+	
+\end{cases}
+$
+\setRTL
+
+	\item ورودی‌های واحد Add سمت چپ معماری:
+	
+		\setLTR
+	$
+	\begin{cases}
+		input1= PC  \\
+		input2 = 4
+		
+	\end{cases}
+	$
+	
+	\setRTL
+	
+	\item ورودی‌های واحد Add سمت راست معماری:
+	
+	\setLTR
+	$
+	\begin{cases}
+		input1= PC + 4  \\
+		input2 = 4 \times Address = 8360
+		
+	\end{cases}
+	$
+	
+	\setRTL
+	
+\end{enumerate}
+\pagebreak
+\subsubsection*{ز}
+
+در این بخش باید مقادیر مختلف File Register را به ازای هر دو دستور مشخص کنیم. به ازای دستور a مقادیر این ثبات‌ها برابر هستند با:
+
+\setLTR
+
+\begin{itemize}
+	\item ReadRegister1 = 3
+	\item ReadRegister2 = 2
+	\item WriteRegister = 2
+	\item WriteData = $\times$
+	\item RegWrite = 0
+\end{itemize}
+
+\setRTL
+
+
+حال به سراغ دستور b می‌رویم:
+
+\setLTR
+
+\begin{itemize}
+	\item ReadRegister1 = 4
+	\item ReadRegister2 = 2
+	\item WriteRegister = 1
+	\item WriteData = 0
+	\item RegWrite = 1
+\end{itemize}
+
+\setRTL
 

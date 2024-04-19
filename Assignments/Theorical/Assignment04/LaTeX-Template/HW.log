@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2024.3.20)  20 APR 2024 00:05
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2024.3.20)  20 APR 2024 01:14
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1184,7 +1184,43 @@ File: figs/2.png Graphic file (type bmp)
 <figs/2.png>
 File: figs/3.png Graphic file (type bmp)
 <figs/3.png>
-) [2] (./HW.aux)
+ [2]
+File: figs/4.png Graphic file (type bmp)
+<figs/4.png>
+File: figs/5.png Graphic file (type bmp)
+<figs/5.png>
+ [3] [4]
+
+LaTeX Font Warning: Command \small invalid in math mode on input line 306.
+
+
+LaTeX Font Warning: Command \small invalid in math mode on input line 307.
+
+
+LaTeX Font Warning: Command \small invalid in math mode on input line 308.
+
+
+LaTeX Font Warning: Command \small invalid in math mode on input line 309.
+
+
+LaTeX Font Warning: Command \small invalid in math mode on input line 310.
+
+
+LaTeX Font Warning: Command \small invalid in math mode on input line 321.
+
+
+LaTeX Font Warning: Command \small invalid in math mode on input line 322.
+
+
+LaTeX Font Warning: Command \small invalid in math mode on input line 323.
+
+
+LaTeX Font Warning: Command \small invalid in math mode on input line 324.
+
+
+LaTeX Font Warning: Command \small invalid in math mode on input line 325.
+
+) [5] (./HW.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
@@ -1192,12 +1228,12 @@ Package rerunfilecheck Info: File `HW.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 25416 strings out of 476683
- 481677 string characters out of 5807575
+ 25448 strings out of 476683
+ 482124 string characters out of 5807575
  1859012 words of memory out of 5000000
- 45171 multiletter control sequences out of 15000+600000
+ 45198 multiletter control sequences out of 15000+600000
  514642 words of font info for 78 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 90i,12n,101p,1342b,341s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 90i,12n,101p,1342b,484s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on HW.pdf (2 pages).
+Output written on HW.pdf (5 pages).
