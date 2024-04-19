@@ -67,8 +67,8 @@ $output = (010000010000010000010101000)_2 = (20820A8)_{16}$
 
 $
 a\rightarrow lw \rightarrow \begin{cases}
-ALUOp = 00 \\
-funct =  a[5:0] = \times
+	ALUOp = 00 \\
+	funct =  a[5:0] = \times
 \end{cases}
 $
 
@@ -129,59 +129,59 @@ $\qquad\qquad\qquad\includegraphics[width=0.7\linewidth]{figs/5.png}$
 	\setRTL
 	
 	\item 
-چون سیم مربوط به ALUSrc برابر یک است، پس حاصل واحد Extend Sign مقدار خروجی آن است:
-\setLTR
-
-$MUX_2 = SignExtend(Instruction[15:0])= (14)_{16} = (20)_{10} \rightarrow \$R20$
-
-\setRTL
-
+	چون سیم مربوط به ALUSrc برابر یک است، پس حاصل واحد Extend Sign مقدار خروجی آن است:
+	\setLTR
+	
+	$MUX_2 = SignExtend(Instruction[15:0])= (14)_{16} = (20)_{10} \rightarrow \$R20$
+	
+	\setRTL
+	
 	\item 
-خروجی این مالتیپلکسر برای ما فاقد اهمیت است.
-
-\setLTR
-
-$MUX_3 = \times$
-
-\setRTL
-
+	خروجی این مالتیپلکسر برای ما فاقد اهمیت است.
+	
+	\setLTR
+	
+	$MUX_3 = \times$
+	
+	\setRTL
+	
 	\item 
-سیم مربوط به Branch صفر است، پس خروجی این مالتیپلکسر برابر است با:
-\setLTR
-
-$MUX_4 = PC +4$
-
-\setRTL
-
+	سیم مربوط به Branch صفر است، پس خروجی این مالتیپلکسر برابر است با:
+	\setLTR
+	
+	$MUX_4 = PC +4$
+	
+	\setRTL
+	
 	\item 
-چون این دستور مربوط به Jump نیست و سیم مربوط به آن صفر است، پس خروجی ما برابر است با:
-\setLTR
-
-$MUX_5 = PC +4$
-
-\setRTL
-	\end{enumerate}
+	چون این دستور مربوط به Jump نیست و سیم مربوط به آن صفر است، پس خروجی ما برابر است با:
+	\setLTR
+	
+	$MUX_5 = PC +4$
+	
+	\setRTL
+\end{enumerate}
 
 حال به سراغ دستور b می‌روبم:
 
 \begin{enumerate}
-		\item 
-مقدار سیم مربوط به RegDst برابر یک است، پس rd خروجی داده می‌شود:
+	\item 
+	مقدار سیم مربوط به RegDst برابر یک است، پس rd خروجی داده می‌شود:
 	\setLTR
 	
 	$MUX_1 = Instruction[15:11]=(00001)_2 = (1)_{10}$
 	
 	\setRTL
 	
-		\item 
-چون سیم مربوط به ALUSrc برابر صفر است، مقدار 2ReadData خروجی داده می‌شود:
-\setLTR
-
-$MUX_2 = Instruction[20:16]= \$rt = \$R2 $
-
-\setRTL	
+	\item 
+	چون سیم مربوط به ALUSrc برابر صفر است، مقدار 2ReadData خروجی داده می‌شود:
+	\setLTR
 	
-			\item 
+	$MUX_2 = Instruction[20:16]= \$rt = \$R2 $
+	
+	\setRTL	
+	
+	\item 
 	چون سیم مربوط به MemtoReg قطع است، پس خروجی این مالتیپلکسر برابر است با:
 	\setLTR
 	
@@ -189,16 +189,16 @@ $MUX_2 = Instruction[20:16]= \$rt = \$R2 $
 	
 	\setRTL	
 	
-				\item 
-بیت کنترلی Branch صفر چون دستور ما مربوط به Branch یا Jump نیست، پس خروجی برابر است با:
+	\item 
+	بیت کنترلی Branch صفر چون دستور ما مربوط به Branch یا Jump نیست، پس خروجی برابر است با:
 	\setLTR
 	
 	$MUX_4 = PC + 4$
 	
 	\setRTL	
 	
-			\item 
-به همان دلیلی که در مورد قبل گفته شد، خروجی برابر است با:
+	\item 
+	به همان دلیلی که در مورد قبل گفته شد، خروجی برابر است با:
 	\setLTR
 	
 	$MUX_5 = PC + 4$
@@ -219,7 +219,7 @@ $MUX_2 = Instruction[20:16]= \$rt = \$R2 $
 		Read1= Instruction[25-21] =\$rs = \$R_3 = (-3)_{10} \\
 		Read2 =Instruction[20-16]= address = (20)_{10}
 		
-		\end{cases}
+	\end{cases}
 	$
 	\setRTL
 	
@@ -240,17 +240,19 @@ $MUX_2 = Instruction[20:16]= \$rt = \$R2 $
 	
 	\setLTR
 	
-		$
+	$
 	\begin{cases}
 		input1= PC + 4 \\
 		input2 = 4 \times Address = 80
 		
 	\end{cases}
 	$
-		\setRTL
-		
-		
+	\setRTL
+	
+	
 \end{enumerate}
+
+\pagebreak
 
 حال به سراغ دستور b می‌رویم:
 
@@ -258,19 +260,19 @@ $MUX_2 = Instruction[20:16]= \$rt = \$R2 $
 \begin{enumerate}
 	\item ورودی‌های واحد ALU معماری:
 	
-\setLTR
-$
-\begin{cases}
-	Read1= Instruction[25-21] =\$rs = \$R_2 = -128 \\
-	Read2 =Instruction[20-16]= \$rt =\$R_4 = -32
+	\setLTR
+	$
+	\begin{cases}
+		Read1= Instruction[25-21] =\$rs = \$R_2 = -128 \\
+		Read2 =Instruction[20-16]= \$rt =\$R_4 = -32
+		
+	\end{cases}
+	$
+	\setRTL
 	
-\end{cases}
-$
-\setRTL
-
 	\item ورودی‌های واحد Add سمت چپ معماری:
 	
-		\setLTR
+	\setLTR
 	$
 	\begin{cases}
 		input1= PC  \\
@@ -309,7 +311,6 @@ $
 	\item WriteData = $\times$
 	\item RegWrite = 0
 \end{itemize}
-
 \setRTL
 
 
@@ -326,4 +327,3 @@ $
 \end{itemize}
 
 \setRTL
-

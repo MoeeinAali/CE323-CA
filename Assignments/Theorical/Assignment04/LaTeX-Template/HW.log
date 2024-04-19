@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2024.3.20)  20 APR 2024 01:41
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2024.3.20)  20 APR 2024 01:52
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1189,13 +1189,7 @@ File: figs/4.png Graphic file (type bmp)
 <figs/4.png>
 File: figs/5.png Graphic file (type bmp)
 <figs/5.png>
- [3] [4]
-
-LaTeX Font Warning: Command \small invalid in math mode on input line 306.
-
-
-LaTeX Font Warning: Command \small invalid in math mode on input line 307.
-
+ [3] [4] [5]
 
 LaTeX Font Warning: Command \small invalid in math mode on input line 308.
 
@@ -1206,7 +1200,10 @@ LaTeX Font Warning: Command \small invalid in math mode on input line 309.
 LaTeX Font Warning: Command \small invalid in math mode on input line 310.
 
 
-LaTeX Font Warning: Command \small invalid in math mode on input line 321.
+LaTeX Font Warning: Command \small invalid in math mode on input line 311.
+
+
+LaTeX Font Warning: Command \small invalid in math mode on input line 312.
 
 
 LaTeX Font Warning: Command \small invalid in math mode on input line 322.
@@ -1220,7 +1217,10 @@ LaTeX Font Warning: Command \small invalid in math mode on input line 324.
 
 LaTeX Font Warning: Command \small invalid in math mode on input line 325.
 
-) [5] (./questions/2.tex) [6] (./questions/3.tex) [7] (./questions/4.tex
+
+LaTeX Font Warning: Command \small invalid in math mode on input line 326.
+
+) [6] (./questions/2.tex) [7] (./questions/3.tex) [8] (./questions/4.tex
 File: figs/7.png Graphic file (type bmp)
 <figs/7.png>
 File: figs/6.png Graphic file (type bmp)
@@ -1292,7 +1292,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 58--59
 [][]
  []
 
-) [8] (./HW.aux)
+) [9] (./HW.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
@@ -1308,4 +1308,4 @@ Here is how much of TeX's memory you used:
  1348 hyphenation exceptions out of 8191
  90i,12n,101p,1342b,484s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on HW.pdf (8 pages).
+Output written on HW.pdf (9 pages).
