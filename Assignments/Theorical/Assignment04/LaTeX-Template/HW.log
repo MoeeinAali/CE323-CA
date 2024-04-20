@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2024.3.20)  20 APR 2024 05:21
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2024.3.20)  20 APR 2024 05:57
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1220,7 +1220,19 @@ LaTeX Font Warning: Command \small invalid in math mode on input line 325.
 
 LaTeX Font Warning: Command \small invalid in math mode on input line 326.
 
-) [6] (./questions/2.tex) [7] (./questions/3.tex) [8] (./questions/4.tex
+) [6] (./questions/2.tex
+File: figs/8.png Graphic file (type bmp)
+<figs/8.png>
+File: figs/9.png Graphic file (type bmp)
+<figs/9.png>
+File: figs/10.png Graphic file (type bmp)
+<figs/10.png>
+
+Overfull \hbox (35.99991pt too wide) in paragraph at lines 19--20
+[][]$  []$ []
+ []
+
+) [7] (./questions/3.tex) [8] (./questions/4.tex
 File: figs/7.png Graphic file (type bmp)
 <figs/7.png>
 File: figs/6.png Graphic file (type bmp)
@@ -1300,10 +1312,10 @@ Package rerunfilecheck Info: File `HW.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 25479 strings out of 476683
- 482647 string characters out of 5807575
+ 25503 strings out of 476683
+ 482985 string characters out of 5807575
  1859012 words of memory out of 5000000
- 45221 multiletter control sequences out of 15000+600000
+ 45242 multiletter control sequences out of 15000+600000
  514642 words of font info for 78 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  90i,12n,101p,1342b,484s stack positions out of 10000i,1000n,20000p,200000b,200000s
