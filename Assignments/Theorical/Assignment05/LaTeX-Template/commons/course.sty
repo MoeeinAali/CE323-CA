@@ -3,6 +3,7 @@
 % Licensed Under GPL
 
 
+\usepackage{listings}
 \usepackage{graphicx,comment,framed}
 \usepackage{amsthm,amssymb,amsmath}
 \usepackage[usenames,dvipsnames]{pstricks}
@@ -12,7 +13,6 @@
 \usepackage[localise=on]{xepersian}
 \usepackage[noend]{algpseudocode}
 \usepackage{physics}
-
 
 %--------------------- Font settings ----------------------
 \settextfont[Scale=1.2,ExternalLocation=fonts/,BoldFont=XBNiloofarBd.ttf]{XBNiloofar.ttf}
@@ -27,18 +27,19 @@
 
 
 \parindent=0em
-\setlength{\parskip}{.5em} 
+\setlength{\parskip}{.5em}
 
 \renewcommand{\labelitemi}{$\small\bullet$}
 \renewcommand{\arraystretch}{1.3}
 \renewcommand{\thefootnote}{\scriptsize\arabic{footnote}}  % footnote number size
 
 \g@addto@macro\normalsize{%
-  \setlength\abovedisplayskip{.8em}
-  \setlength\abovedisplayshortskip{.55em}
-%  \setlength\belowdisplayskip{.8em}
-%  \setlength\belowdisplayshortskip{.69em}
+    \setlength\abovedisplayskip{.8em}
+    \setlength\abovedisplayshortskip{.55em}
+    %  \setlength\belowdisplayskip{.8em}
+    %  \setlength\belowdisplayshortskip{.69em}
 }
+
 
 %-------------------------- Notations ------------------------------------
 
@@ -84,7 +85,6 @@
 \newcommand{\REM}[1]{}
 \renewcommand{\حذف}{\REM}
 \newcommand{\لر}{\lr}
-\newcommand{\کد}[1]{\lr{\tt #1}}
 \newcommand{\پاورقی}[1]{\footnote{\lr{#1}}}
 
 
@@ -227,4 +227,25 @@
 \newenvironment{example}
 	{\begin{example*}{.47\textwidth}{.475\textwidth}}
 	{\end{example*}}
+
+%--------------------- code style ----------------------
+
+\lstset{
+	language=Python,                % choose the language of the code
+	basicstyle=\small\ttfamily,       % the size of the fonts that are used for the code
+	showstringspaces=false,         % underline spaces within strings
+	frame=single,           % adds a frame around the code
+}
+
+% python program
+\lstnewenvironment{python}[1][]
+{\lstset{#1}\latin\singlespacing}
+{\persian}
+
+% python program (numbered)
+\lstnewenvironment{python*}[1][]
+{\lstset{numbers=left,xleftmargin=1.5em,#1}\latin\singlespacing}
+{\persian}
+
+\newcommand{\کد}[1]{\lr{\tt #1}}
 

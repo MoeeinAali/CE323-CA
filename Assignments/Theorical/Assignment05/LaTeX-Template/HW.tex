@@ -1,14 +1,43 @@
 \documentclass[10pt,a4paper]{article}
-\usepackage{float}
+
 \usepackage{commons/course}
-\usepackage{amssymb}
-\usepackage{ifsym}
-\usepackage{graphicx}
+
+\usepackage{xcolor}
+\definecolor{keywordstyle}{rgb}{0.0, 0.4, 0.8} % A bluer shade
+\definecolor{stringstyle}{rgb}{0.9, 0.17, 0.31} % amaranth
+\definecolor{commentstyle}{rgb}{0.1, 0.6, 0.2} % green
+\definecolor{numberstyle}{rgb}{0.4, 0.4, 0.4} % gray
+\definecolor{backgroundcolor}{rgb}{0.94, 0.97, 1.0} % aliceblue
+
+
+\lstset{
+	language=Python,
+	basicstyle=\ttfamily\small,
+	keywordstyle=\color{keywordstyle},
+	stringstyle=\color{stringstyle},
+	commentstyle=\color{commentstyle},
+	showstringspaces=false,
+	numbers=left,                     % نمایش شماره خطوط در سمت چپ
+	numberstyle=\tiny\color{numberstyle},% سبک شماره خطوط
+	stepnumber=1,                     % شماره‌گذاری هر خط
+	numbersep=5pt, 
+	keepspaces=true,                  % فاصله شماره‌ها از کد
+	tabsize=4,
+	showspaces=false,
+	showstringspaces=false,
+	showtabs=false,
+	tabsize=3,
+	breaklines=true,
+	breakatwhitespace=false,
+	frame=single,
+	backgroundcolor=\color{backgroundcolor}
+}
 
 \begin{document}
-	
 
 \سربرگ{تمرین تئوری پنجم}{}{پاسخ‌دهنده: معین آعلی - 401105561}{استاد: دکتر لاله ارشدی}
+
+
 
 \مسئله{‌}
 \input{questions/1.tex}
