@@ -12,6 +12,14 @@ $
 \subsubsection*{ب}
 
 \setLTR
+\qquad \qquad \qquad \qquad \qquad \includegraphics[width=0.5\linewidth]{figs/screenshot001}
+\setRTL
+
+فرض می‌کنیم درصد دستوراتی که وابستگی دارند مطابق جدول فوق است، پس برای هر نوع از دستورات تعداد چرخه تاخیر را محاسبه می‌کنیم	و سپس با فرض این که هیچ
+$Forwarding$
+ای نداریم، تسریع را حساب می‌کنیم:
+
+\setLTR
 $
 \begin{cases}
 	EX \ to \ 1st \ Only = 2 Delay Cycle \\
@@ -26,21 +34,21 @@ $
 $
 SpeedUp = \frac{T_1}{T_2} = \frac{\frac{CPI_1}{CR_1}}{\frac{CPI_2}{CR_2}} = \frac{5\times2}{
 (0.05\times3 + 0.2\times1+0.1\times2+0.1\times1+0.05\times3+0.5\times3 + 0.5\times1)\times 2.5
-} \simeq 3.07
+} \simeq 3.1
 $
 \setRTL
 
 
 \subsubsection*{ج}
 
-فقط برای وابستگی 
+اگر داده‌ها را به صورت زودهنگام در اختیار داشته باشیم باید فقط برای وابستگی 
 $MEM \ to \ 1st \ only$
-باید 1 کلاک به تاخیر اضافه کنیم. پس:
+1 کلاک به تاخیر کنیم. پس:
 
 \setLTR
 $
 SpeedUp = \frac{5\times2}{(0.2\times2 + 0.8\times1)\times2.5} = \frac{10}{3} 
-\simeq 3.33
+\simeq 3.3
 $
 \setRTL
 
@@ -50,11 +58,15 @@ $
 
 \setLTR
 $
-SpeedUp = \frac{5\times2}{(0.2\times2 + 0.1\times2+0.7\times1)\times2.5} \simeq 3.08
+SpeedUp = \frac{5\times2}{(0.2\times2 + 0.1\times2+0.7\times1)\times2.5} \simeq 3.1
 $
 \setRTL
 
+\pagebreak
+
 \subsubsection*{ه}
+
+اگر همه پرش‌ها را انجام نشده فرض کنیم، آن‌وقت تسریع برابر است با:
 
 \setLTR
 $

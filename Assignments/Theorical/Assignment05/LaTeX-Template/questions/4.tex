@@ -21,13 +21,17 @@ $I_6$
 \setLTR
 \begin{lstlisting}
 I1:     lw      R1, 0(R2)       ; R1 ← Memory[R2]
-I5:     addi    R4, R4,     -1  ; R4 ← R4-1
 I2:     addi    R1, R1,     1   ; R1 ← R1+1
+I5:     addi    R4, R4,     -1  ; R4 ← R4-1
 I3:     sw      R1, 0(R2)       ; Memory[R2] ← R1
 I4:     addi    R2, R2,     8   ; R2 ← R2+8
 I6:     bne     R4, R0,     I1  ; branch if R4!=0
 \end{lstlisting}
 \setRTL
+
+البته در بخش‌های بعدی مجبور هستیم که جای دستورات 
+$I2 , I5$
+را تعویض کنیم چون در بخش بعدی فاصله آن کمتر از 2 می‌شود.
 
 \subsubsection*{ب}
 در این بخش ما دستوری را بعد از 
