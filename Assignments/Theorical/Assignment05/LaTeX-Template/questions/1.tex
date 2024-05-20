@@ -23,18 +23,19 @@ $Forwarding$
 $
 \begin{cases}
 	EX \ to \ 1st \ Only = 2 Delay Cycle \\
-	MEM \ to \ 1st \ Only = 0 Delay Cycle \\
+	MEM \ to \ 1st \ Only =2 Delay Cycle \\
 	EX \ to \ 2nd \ Only = 1 Delay Cycle\\ 
-	MEM \ to \ 2nd \ Only = 0 Delay Cycle\\
+	MEM \ to \ 2nd \ Only =1 Delay Cycle\\
 	EX \ to \ 1st = 2 Delay Cycle\\
 	EX \ to \ 2nd =  2 Delay Cycle
 	\end{cases}
 $
 
 $
-SpeedUp = \frac{T_1}{T_2} = \frac{\frac{CPI_1}{CR_1}}{\frac{CPI_2}{CR_2}} = \frac{5\times2}{
-(0.05\times3 + 0.2\times1+0.1\times2+0.1\times1+0.05\times3+0.5\times3 + 0.5\times1)\times 2.5
-} \simeq 3.1
+SpeedUp = \frac{T_1}{T_2} = \frac{\frac{CPI_1}{CR_1}}{\frac{CPI_2}{CR_2}} =
+ \frac{\frac{5}{2.5}}{
+\frac{0.05\times3 + 0.2\times3+0.1\times2+0.1\times2+0.05\times3+ 0.5\times1}{2}
+} \simeq 2.2
 $
 \setRTL
 
@@ -47,7 +48,7 @@ $MEM \ to \ 1st \ only$
 
 \setLTR
 $
-SpeedUp = \frac{5\times2}{(0.2\times2 + 0.8\times1)\times2.5} = \frac{10}{3} 
+SpeedUp = \frac{T_1}{T_2} = \frac{\frac{CPI_1}{CR_1}}{\frac{CPI_2}{CR_2}} = \frac{\frac{5}{2.5}}{\frac{0.2\times2 + 0.8\times1}{2}} = \frac{10}{3} 
 \simeq 3.3
 $
 \setRTL
@@ -58,7 +59,7 @@ $
 
 \setLTR
 $
-SpeedUp = \frac{5\times2}{(0.2\times2 + 0.1\times2+0.7\times1)\times2.5} \simeq 3.1
+SpeedUp = \frac{T_1}{T_2} = \frac{\frac{CPI_1}{CR_1}}{\frac{CPI_2}{CR_2}} = \frac{\frac{5}{2.5}}{\frac{0.2\times2 + 0.1\times2+0.7\times1}{2}} \simeq 3.1
 $
 \setRTL
 
@@ -70,7 +71,7 @@ $
 
 \setLTR
 $
-SpeedUp = \frac{5}{0.2\times2+0.1\times(0.2\times1+0.8\times2)+0.7\times1} \times \frac{2}{2.5} \simeq 3.12
+SpeedUp = \frac{T_1}{T_2} = \frac{\frac{CPI_1}{CR_1}}{\frac{CPI_2}{CR_2}} = \frac{5}{0.2\times2+0.1\times(0.2\times1+0.8\times2)+0.7\times1} \times \frac{2}{2} \simeq 3.12
 $
 \setRTL
 
