@@ -1,0 +1,48 @@
+\subsubsection*{الف}
+
+\setLTR
+$
+AMAT = hitTime + missRate \times missPenalty =0.97 \times 1 + 0.03 \times 110 = 4.3
+$
+\setRTL
+
+\subsubsection*{ب}
+با توجه به اینکه 64 کیلوبایت اندازه حافظه و 1 گیگابایت داده داریم، پس نرخ hit برابر است با:
+
+\setLTR
+$
+hitRate = \frac{64KB}{1GB} = \frac{64\times2^10}{2^{30}} = \frac{2^{16}}{2^{30}} = 2^{-14} \longrightarrow missRate = 1-hitRate = 1-2^{-14} \simeq 1
+$
+\setRTL
+
+حال مقدار AMAT را بدست می‌آوریم:
+
+\setLTR
+$
+AMAT = 1 + 110 = 111
+$
+\setRTL
+\subsubsection*{ج}
+وقتی که حافظه نهان غیرفعال است برای هر دسترسی به 105 چرخه نیاز داریم، در بخش قبل که اگر تمرکز موضعی نباشد باید هزینه بیشتری بدهیم. پس باید از این اصل استفاده کرده تا missRate کم شود.
+
+
+
+\subsubsection*{د}
+
+می‌دانیم که باید 
+$(1-missRate)\times Gain - missRate \times Loss > 0$
+باشد. پس:
+
+\setLTR
+$
+(1-missRate)\times Gain - missRate \times Loss > 0 \longrightarrow Gain - missRate\times(Gain + Loss) > 0 \\ \longrightarrow missRate 	< \frac{Gain}{Gain + Loss} 
+$
+\setRTL
+
+که در این سوال مقدار آن برابر است با:
+
+\setLTR
+$
+MAX(missRate) = \frac{Gain}{Grain + Loss} = \frac{104}{104 + 5}\simeq 95.4
+$
+\setRTL
